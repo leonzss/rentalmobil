@@ -46,7 +46,7 @@ Untuk cara instalasi dan konfigurasi caranya sangat mudah
 1. Kalian download file ZIP project ini
 2. Kemudian rename/ubah nama file ZIP yang telah didownload menjadi "rentalmobil.zip"
 3. Selanjutnya kalian bisa extract file ZIP yang sudah didownload tadi
-4. Copy folder rentalmobil, lalu paste ke folder htdocs
+4. Copy folder rentalmobil hasil extract tadi, lalu paste ke folder htdocs
 5. Aktifkan Apache pada XAMPP
 6. Jalankan project dengan ketik http://localhost/rentalmobil/
 
