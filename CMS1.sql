@@ -1,0 +1,248 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : Oracle11gXE
+ Source Server Type    : Oracle
+ Source Server Version : 110200
+ Source Schema         : CMS1
+
+ Target Server Type    : Oracle
+ Target Server Version : 110200
+ File Encoding         : 65001
+
+ Date: 14/07/2022 01:04:33
+*/
+
+
+-- ----------------------------
+-- Table structure for ADMINS
+-- ----------------------------
+DROP TABLE "CMS1"."ADMINS";
+CREATE TABLE "CMS1"."ADMINS" (
+  "ADMIN_ID" NUMBER(2,0) NOT NULL,
+  "USERNAME" VARCHAR2(10 BYTE),
+  "PASSWORD" VARCHAR2(50 BYTE),
+  "FULLNAME" VARCHAR2(20 BYTE)
+)
+LOGGING
+NOCOMPRESS
+PCTFREE 10
+INITRANS 1
+STORAGE (
+  INITIAL 65536 
+  NEXT 1048576 
+  MINEXTENTS 1
+  MAXEXTENTS 2147483645
+  FREELISTS 1
+  FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT
+)
+PARALLEL 1
+NOCACHE
+DISABLE ROW MOVEMENT
+;
+
+-- ----------------------------
+-- Records of ADMINS
+-- ----------------------------
+INSERT INTO "CMS1"."ADMINS" VALUES ('1', 'admin', '1eea89749d6001b8845a8f1aac5e32f260c5822f', 'Administrator');
+
+-- ----------------------------
+-- Table structure for CUSTOMERS
+-- ----------------------------
+DROP TABLE "CMS1"."CUSTOMERS";
+CREATE TABLE "CMS1"."CUSTOMERS" (
+  "CUSTOMER_ID" NUMBER(2,0) NOT NULL,
+  "NAMA" VARCHAR2(50 BYTE),
+  "ALAMAT" VARCHAR2(50 BYTE),
+  "NO_HP" VARCHAR2(20 BYTE),
+  "IMAGE_TRF" VARCHAR2(100 BYTE),
+  "KODE_MOBIL" VARCHAR2(20 BYTE),
+  "DURASI_SEWA" VARCHAR2(20 BYTE)
+)
+LOGGING
+NOCOMPRESS
+PCTFREE 10
+INITRANS 1
+STORAGE (
+  INITIAL 65536 
+  NEXT 1048576 
+  MINEXTENTS 1
+  MAXEXTENTS 2147483645
+  FREELISTS 1
+  FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT
+)
+PARALLEL 1
+NOCACHE
+DISABLE ROW MOVEMENT
+;
+
+-- ----------------------------
+-- Records of CUSTOMERS
+-- ----------------------------
+INSERT INTO "CMS1"."CUSTOMERS" VALUES ('30', 'ANJAS', 'GEJAYEN', '0812', 'a4e7aafd28570eae264819b7c63a8260.png', 'AES123', '1');
+INSERT INTO "CMS1"."CUSTOMERS" VALUES ('31', 'LEO', 'SOLO', '0812', '3dd636b6db5cb28ad6f991a1ec2337d9.png', 'SS12', '1');
+INSERT INTO "CMS1"."CUSTOMERS" VALUES ('32', 'ROKI', 'PALEMBANG', '0815', '306b0219390118420412b4a7db7a3510.png', 'AA2345', '1');
+
+-- ----------------------------
+-- Table structure for DETAIL_MOBIL
+-- ----------------------------
+DROP TABLE "CMS1"."DETAIL_MOBIL";
+CREATE TABLE "CMS1"."DETAIL_MOBIL" (
+  "NEWS_ID" NUMBER(2,0) NOT NULL,
+  "NEWS_CAT_FID" NUMBER(2,0),
+  "NEWS_TITLE" VARCHAR2(20 BYTE),
+  "NEWS_DESCRIPTION" VARCHAR2(255 BYTE),
+  "NEWS_IMAGE" VARCHAR2(100 BYTE),
+  "TAHUN" VARCHAR2(20 BYTE),
+  "HARGA_SEWA" VARCHAR2(50 BYTE),
+  "AC" VARCHAR2(20 BYTE),
+  "TRANSMISI" VARCHAR2(50 BYTE),
+  "STATUS_MOBIL" VARCHAR2(50 BYTE),
+  "PLAT_MOBIL" VARCHAR2(20 BYTE),
+  "KODE_MOBIL" VARCHAR2(20 BYTE)
+)
+LOGGING
+NOCOMPRESS
+PCTFREE 10
+INITRANS 1
+STORAGE (
+  INITIAL 65536 
+  NEXT 1048576 
+  MINEXTENTS 1
+  MAXEXTENTS 2147483645
+  FREELISTS 1
+  FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT
+)
+PARALLEL 1
+NOCACHE
+DISABLE ROW MOVEMENT
+;
+
+-- ----------------------------
+-- Records of DETAIL_MOBIL
+-- ----------------------------
+INSERT INTO "CMS1"."DETAIL_MOBIL" VALUES ('44', '13', 'TOYOTA CAMRY', 'ABU - ABU', '7aa31a50b6ea8462a949a54335d9733d.png', '2019', 'Rp. 400.000', '1', '1', '0', 'AE 1123 AZ', 'CMR123');
+INSERT INTO "CMS1"."DETAIL_MOBIL" VALUES ('46', '17', 'HONDA BRIO', 'HITAM', '0c469a8d57f19d28abbf0789c95ec21b.png', '2020', 'Rp. 350.000', '1', '0', '1', 'AB 1212 SS', 'BRIO99');
+INSERT INTO "CMS1"."DETAIL_MOBIL" VALUES ('45', '16', 'HAICE PREMIO', 'PUTIH', '52b07a323043d993d970dedffeb6ed21.png', '2018', 'Rp. 800.000', '0', '1', '1', 'AA 9087 QQ', 'HP123');
+INSERT INTO "CMS1"."DETAIL_MOBIL" VALUES ('47', '18', 'NEWS PAJERO SPORT', 'PUTIH', '779bb57cc1e89355457c74f8179d0a20.png', '2020', 'Rp. 800.000', '1', '1', '0', 'BG 3434 XX', 'PJR999');
+INSERT INTO "CMS1"."DETAIL_MOBIL" VALUES ('49', '17', 'DAIHATSU AYLA', 'BIRU', 'cde7d8dd24ec87b7be29bac9d30ef9fe.png', '2019', 'Rp. 400.000', '1', '0', '1', 'BG 1234 WE', 'DAY123');
+INSERT INTO "CMS1"."DETAIL_MOBIL" VALUES ('50', '18', 'ALPHARD FACELIFT', 'PUTIH', '95c0d8274c3ab4a6c3099adff264ddfd.png', '2018', 'Rp. 500.000', '1', '1', '0', 'AA 4454 RW', 'ALF223');
+
+-- ----------------------------
+-- Table structure for JENIS_MOBIL
+-- ----------------------------
+DROP TABLE "CMS1"."JENIS_MOBIL";
+CREATE TABLE "CMS1"."JENIS_MOBIL" (
+  "NEWS_CAT_ID" NUMBER(2,0) NOT NULL,
+  "NEWS_CAT_NAME" VARCHAR2(20 BYTE)
+)
+LOGGING
+NOCOMPRESS
+PCTFREE 10
+INITRANS 1
+STORAGE (
+  INITIAL 65536 
+  NEXT 1048576 
+  MINEXTENTS 1
+  MAXEXTENTS 2147483645
+  FREELISTS 1
+  FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT
+)
+PARALLEL 1
+NOCACHE
+DISABLE ROW MOVEMENT
+;
+
+-- ----------------------------
+-- Records of JENIS_MOBIL
+-- ----------------------------
+INSERT INTO "CMS1"."JENIS_MOBIL" VALUES ('13', 'SEDAN');
+INSERT INTO "CMS1"."JENIS_MOBIL" VALUES ('16', 'MINI BUS');
+INSERT INTO "CMS1"."JENIS_MOBIL" VALUES ('17', 'CITY CAR');
+INSERT INTO "CMS1"."JENIS_MOBIL" VALUES ('18', 'SUV');
+
+-- ----------------------------
+-- Table structure for KONTAKS
+-- ----------------------------
+DROP TABLE "CMS1"."KONTAKS";
+CREATE TABLE "CMS1"."KONTAKS" (
+  "KONTAK_ID" NUMBER(2,0) NOT NULL,
+  "NAMA" VARCHAR2(20 BYTE),
+  "SUBJEK" VARCHAR2(10 BYTE),
+  "PESAN" VARCHAR2(255 BYTE)
+)
+LOGGING
+NOCOMPRESS
+PCTFREE 10
+INITRANS 1
+STORAGE (
+  INITIAL 65536 
+  NEXT 1048576 
+  MINEXTENTS 1
+  MAXEXTENTS 2147483645
+  FREELISTS 1
+  FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT
+)
+PARALLEL 1
+NOCACHE
+DISABLE ROW MOVEMENT
+;
+
+-- ----------------------------
+-- Records of KONTAKS
+-- ----------------------------
+INSERT INTO "CMS1"."KONTAKS" VALUES ('6', 'ANJAS', 'KOMPLAIN', 'AC RUSAK');
+
+-- ----------------------------
+-- Sequence structure for CUSTOMER_ID_SEQ
+-- ----------------------------
+DROP SEQUENCE "CMS1"."CUSTOMER_ID_SEQ";
+CREATE SEQUENCE "CMS1"."CUSTOMER_ID_SEQ" MINVALUE 1 MAXVALUE 1000 INCREMENT BY 1 NOCACHE;
+
+-- ----------------------------
+-- Sequence structure for KONTAK_ID_SEQ
+-- ----------------------------
+DROP SEQUENCE "CMS1"."KONTAK_ID_SEQ";
+CREATE SEQUENCE "CMS1"."KONTAK_ID_SEQ" MINVALUE 1 MAXVALUE 1000 INCREMENT BY 1 NOCACHE;
+
+-- ----------------------------
+-- Sequence structure for NEWS_CAT_ID_SEQ
+-- ----------------------------
+DROP SEQUENCE "CMS1"."NEWS_CAT_ID_SEQ";
+CREATE SEQUENCE "CMS1"."NEWS_CAT_ID_SEQ" MINVALUE 1 MAXVALUE 1000 INCREMENT BY 1 NOCACHE;
+
+-- ----------------------------
+-- Sequence structure for NEWS_ID_SEQ
+-- ----------------------------
+DROP SEQUENCE "CMS1"."NEWS_ID_SEQ";
+CREATE SEQUENCE "CMS1"."NEWS_ID_SEQ" MINVALUE 1 MAXVALUE 1000 INCREMENT BY 1 NOCACHE;
+
+-- ----------------------------
+-- Primary Key structure for table ADMINS
+-- ----------------------------
+ALTER TABLE "CMS1"."ADMINS" ADD CONSTRAINT "ADMINS_ADMIN_ID_NUM_PK" PRIMARY KEY ("ADMIN_ID");
+
+-- ----------------------------
+-- Primary Key structure for table CUSTOMERS
+-- ----------------------------
+ALTER TABLE "CMS1"."CUSTOMERS" ADD CONSTRAINT "CUSTOMERS_CUSTOMER_ID_NUM_PK" PRIMARY KEY ("CUSTOMER_ID");
+
+-- ----------------------------
+-- Primary Key structure for table DETAIL_MOBIL
+-- ----------------------------
+ALTER TABLE "CMS1"."DETAIL_MOBIL" ADD CONSTRAINT "NEWS_NEWS_ID_NUM_PK" PRIMARY KEY ("NEWS_ID");
+
+-- ----------------------------
+-- Primary Key structure for table JENIS_MOBIL
+-- ----------------------------
+ALTER TABLE "CMS1"."JENIS_MOBIL" ADD CONSTRAINT "NEWS_CAT_NEWS_CAT_ID_NUM_PK" PRIMARY KEY ("NEWS_CAT_ID");
+
+-- ----------------------------
+-- Primary Key structure for table KONTAKS
+-- ----------------------------
+ALTER TABLE "CMS1"."KONTAKS" ADD CONSTRAINT "KONTAKS_KONTAK_ID_NUM_PK" PRIMARY KEY ("KONTAK_ID");
