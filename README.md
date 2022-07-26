@@ -1,5 +1,9 @@
 # Aplikasi Rental Mobil Menggunakan Konsep PHP MVC &amp; MySQL
 
+### Tentang Saya
+
+M. Anjas Leonardi Mahasiswa Sistem Informasi di Universitas Mercu Buana Yogyakarta. https://www.instagram.com/leonzss_/
+
 ### Kenapa saya membuat aplikasi ini?
 
 Ini merupakan aplikasi yang saya jadikan sebagai portfolio. Sebenarnya saya sudah banyak membuat banyak aplikasi berbasi web, namun saya lupa membackupnya. Jadi saya harus mengulang lagi dari awal demi portfolio. Selain sebagai portfolio, contoh aplikasi ini juga bisa saya jadikan sebagai latihan untuk mengasah skill koding saya.
@@ -18,34 +22,35 @@ Jawabanya adalah **sangat sangat boleh!** Tapi ingat tetap sertakan siapa yang m
 
 ### Fiturnya apa saja sih?
 Untuk fiturnya masih sangas sederhana, contohnya sebagai berikut
-1. **Modul Master Mobil**
+1. **Modul Master Jenis Mobil**
    
-   Di modul ini saya membuat fitur untuk melihat, menambah, mengubah dan menghapus master mobil.
+   Di modul ini saya membuat fitur untuk melihat, menambah, mengubah dan menghapus master Jenis mobil.
    
-2. **Modul Master Pemesan**
+2. **Modul Master Detail Mobil**
    
-   Di modul ini saya membuat fitur untuk melihat, menambah, mengubah dan menghapus data pemesan.
+   Di modul ini saya membuat fitur untuk melihat, menambah, mengubah dan menghapus master Detail mobil.
    
-3. **Modul Master Pesanan**
+3. **Modul Master Rental Mobil**
+   
+   Di modul ini saya membuat fitur untuk melihat dan menghapus data rental mobil.
+   
+4. **Modul Master Feedback**
 
-   Di modul ini saya membuat fitur untuk melihat, menambah, mengubah dan menghapus data pesanan.
+   Di modul ini saya membuat fitur untuk melihat dan menghapus data feedback.
    
-4. **Modul Manajemen Akun**
-
-   Di modul ini saya membuat fitur untuk melihat, menambah dan menghapus data akun atau pengguna.
    
-
 ### Instalasi & Konfigurasi
 
 Untuk cara instalasi dan konfigurasi caranya sangat mudah
 
-1. Kalian download atau clone repositori ini
-2. Selanjutnya kalian bisa buka file `config.php` 
-3. Ubah isi dari konstanta `BASE_URL` dengan `http://localhost/namafolder/`
-4. Untuk `namafolder` silahkan kalian ganti sesuai nama folder dari aplikasi ini di komputer atau laptop kalian
-5. Ubah juga konfigurasi database di file `config.php` 
-6. Untuk login kalian bisa register terlebih dahulu atau menggunakan username = `admin` dan password `admin`
+1. Kalian download file ZIP project ini
+2. Kemudian rename/ubah nama file ZIP yang telah didownload menjadi "rentalmobil.zip"
+3. Selanjutnya kalian bisa extract file ZIP yang sudah didownload tadi
+4. Copy folder rentalmobil, lalu paste ke folder htdocs
+5. Aktifkan Apache pada XAMPP
+6. Jalankan project dengan ketik http://localhost/rentalmobil/
 
-### Tentang Saya
+### Untuk Login :
 
-Fakhrul Fanani Nugroho siswa Kelas 12 Jurusan Teknik Komputer Informatika di SMK Negeri 1 Wanareja. https://www.instagram.com/nugrohospace/
+Username : admin
+Password : admin
