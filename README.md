@@ -1,3 +1,8 @@
 # Cobarekweb
+Coba repository rekayasa web
 
-Repository Mata Kuliah Rekayasa Web
+hallo ini adalah repository pertama saya di github
+
+saya menyukai ☕ 🍕 dan 🏞️
+
+terimakasih
